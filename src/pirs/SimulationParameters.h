@@ -37,10 +37,9 @@ public:
 	bool user_specified_random_seed;
 	uint64_t random_seed;
 	int num_simulator_threads;
-	string output_directory;
+	string output_prefix;
 	const char **input_refs;
 	unsigned num_input_refs;
-	string indiv_name;
 
 	SimulationParameters(int argc, char **argv);
 };
@@ -50,6 +49,8 @@ public:
 	InputStream  *in_files;
 	OutputStream  out_file_1;
 	OutputStream  out_file_2;
+	OutputStream  out_file_clean_1;
+	OutputStream  out_file_clean_2;
 	OutputStream  insert_distr_log_file;
 	OutputStream  info_log_file;
 	OutputStream  error_distr_log_file;
@@ -67,4 +68,3 @@ class IndelProfile;
 
 
 #endif /* _SIMULATION_PARAMETERS_H */
-
